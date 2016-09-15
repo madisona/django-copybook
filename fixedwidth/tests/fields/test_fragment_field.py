@@ -1,7 +1,7 @@
 import unittest
 
-from djcopybook.fixedwidth import fields
-from djcopybook.fixedwidth.tests import record_helper
+from fixedwidth import fields
+from fixedwidth.tests import record_helper
 
 
 class FragmentFieldTests(unittest.TestCase):

@@ -1,14 +1,17 @@
+Fixed-Width
+===========
 
-This app allows you to convert objects into fixed width records.
+.. image:: https://travis-ci.org/madisona/django-copybook.svg?branch=master
+    :target: https://travis-ci.org/madisona/django-copybook
 
-In version 0.1.0 we introduce an entirely new (albeit similar) interface
-that breaks all dependency on Django and removes the necessity of
-manually setting the order of fields. We call it 'fixedwidth'.
+This app allows you to easily convert objects into fixed width records, and
+easily convert fixed width records back to objects.
+
 
 Usage:
 
-  from djcopybook.fixedwidth import Record
-  from djcopybook.fixedwidth import fields  
+  from fixedwidth import Record
+  from fixedwidth import fields
 
   class Person(Record):
       first_name = fields.StringField(length=20)
@@ -129,11 +132,3 @@ truncate each field down to the expected size instead of raising an error.
     >>> s = Sample(field='this is too long')
     >>> str(s)
     'this '
-
-
-Notes:
-  Because we are using OrderedDict, the new fixedwidth implementation
-  will only work on Python 2.7 and above. (you can copy the OrderdDict
-  class yourself if you need < 2.7)
-
-  The previous Django model implementation is pending deprecation.

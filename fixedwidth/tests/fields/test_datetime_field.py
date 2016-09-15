@@ -1,7 +1,7 @@
 from datetime import date, datetime
 import unittest
 
-from djcopybook.fixedwidth import fields
+from fixedwidth import fields
 
 
 class DateTimeFieldTests(unittest.TestCase):

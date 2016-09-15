@@ -1,6 +1,6 @@
 
 from unittest import TestCase
-from djcopybook.fixedwidth import fields, Record
+from fixedwidth import fields, Record
 
 
 class NullBooleanFieldTests(TestCase):

@@ -1,7 +1,7 @@
 
 from collections import OrderedDict
 from copy import deepcopy
-from djcopybook.fixedwidth import fields
+from fixedwidth import fields
 import six
 
 

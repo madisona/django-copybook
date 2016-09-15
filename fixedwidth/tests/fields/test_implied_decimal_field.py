@@ -1,7 +1,7 @@
 
 from decimal import Decimal
 from unittest import TestCase
-from djcopybook.fixedwidth import fields
+from fixedwidth import fields
 
 
 class ImpliedDecimalFieldTests(TestCase):

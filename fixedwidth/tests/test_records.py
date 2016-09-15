@@ -1,8 +1,8 @@
 import unittest
 
-from djcopybook import fixedwidth
-from djcopybook.fixedwidth import fields
-from djcopybook.fixedwidth.tests import record_helper
+import fixedwidth
+from fixedwidth import fields
+from fixedwidth.tests import record_helper
 
 
 class RecordTests(unittest.TestCase):

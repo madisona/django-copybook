@@ -1,5 +1,5 @@
-from djcopybook import fixedwidth
-from djcopybook.fixedwidth import fields
+import fixedwidth
+from fixedwidth import fields
 
 
 class RecordOne(fixedwidth.Record):

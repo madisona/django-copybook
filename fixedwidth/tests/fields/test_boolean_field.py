@@ -1,7 +1,7 @@
 import unittest
 
-from djcopybook.fixedwidth import fields, Record
-from djcopybook.fixedwidth.tests import record_helper
+from fixedwidth import fields, Record
+from fixedwidth.tests import record_helper
 
 
 class BooleanFieldTests(unittest.TestCase):

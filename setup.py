@@ -1,19 +1,18 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="django-copybook",
-    version='1.2.1',
-    author="imtapps",
-    author_email="webadmin@imtapps.com",
-    description="Convert Objects and Django models to/from fixed format records.",
-    url="https://github.com/imtapps/django-copybook",
+    name="fixed-width",
+    version='1.0.0',
+    author="madisona",
+    author_email="aaron.l.madison@gmail.com",
+    description="Convert Python Objects to/from fixed format records.",
+    url="https://github.com/madisona/django-copybook",
     long_description=open('README.txt', 'r').read(),
     packages=find_packages(),
     install_requires=['six'],
     zip_safe=False,
     classifiers=[
-        "Development Status :: 4 - Beta",
-        "Framework :: Django",
+        "Development Status :: 5 - Production/Stable",
         "Intended Audience :: Developers",
         "License :: OSI Approved :: BSD License",
         "Operating System :: OS Independent",

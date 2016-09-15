@@ -1,6 +1,6 @@
 import unittest
 
-from djcopybook.fixedwidth import fields
+from fixedwidth import fields
 
 
 class IntegerFieldTests(unittest.TestCase):
