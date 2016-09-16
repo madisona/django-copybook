@@ -10,20 +10,22 @@ easily convert fixed width records back to objects.
 
 Usage:
 
-  from fixedwidth import Record
-  from fixedwidth import fields
 
-  class Person(Record):
-      first_name = fields.StringField(length=20)
-      last_name = fields.StringField(length=30)
-      siblings = fields.IntegerField(length=2)
-      birth_date = fields.DateField(length=10, format="%Y-%m-%d")
+    from fixedwidth import Record
+    from fixedwidth import fields
 
-  >>> p = Person(first_name="Joe", last_name="Smith", siblings=3, birth_date="1982-09-11")
-  >>> p.birth_date
-  datetime.date(1982, 9, 11)
-  >>> p.to_record()
-  'Joe                 Smith                         031982-09-11'
+    class Person(Record):
+        first_name = fields.StringField(length=20)
+        last_name = fields.StringField(length=30)
+        siblings = fields.IntegerField(length=2)
+        birth_date = fields.DateField(length=10, format="%Y-%m-%d")
+
+    >>> p = Person(first_name="Joe", last_name="Smith", siblings=3, birth_date="1982-09-11")
+    >>> p.birth_date
+    datetime.date(1982, 9, 11)
+    >>> p.to_record()
+    'Joe                 Smith                         031982-09-11'
+
 
 You can also set attributes after a record has been instantiated, give
 fields default values, and other fun stuff.
@@ -39,6 +41,7 @@ New in version 0.1.1:
   length on the ListField tells how many times that record repeats.
 
   USAGE:
+
     class PhoneNumber(Record):
         identifier = fields.StringField(length=10, default="Mobile")
         area_code = fields.IntegerField(length=3)
@@ -64,6 +67,7 @@ New in version 0.1.2:
   Convert records from a fixed width format back into record objects
 
   USAGE:
+
     class Person(Record):
         first_name = fields.StringField(length=20)
         last_name = fields.StringField(length=30)
@@ -87,6 +91,7 @@ New in version 0.1.6:
   Useful if you have a common element included in multiple Records.
 
   USAGE:
+
     class Phone(Record):
         area_code = fields.IntegerField(length=3)
         prefix = fields.IntegerField(length=3)
@@ -125,7 +130,9 @@ if the form has more data than that specific record wants.
 New in version 0.1.9:
 ``Record`` now has an ``auto_truncate`` attribute you can set to
 truncate each field down to the expected size instead of raising an error.
+
     USAGE:
+
     class Sample(Record):
         field = fields.StringField(length=5)
 
